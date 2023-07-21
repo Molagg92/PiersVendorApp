@@ -6,8 +6,12 @@ using System;
 namespace PiersVendorApp.Tests;
 
         [TestClass]
-public class CategoryTests
+public class CategoryTests : IDisposable
 {
+   public void Dispose()
+    {
+      OrderRequest.ClearAll();
+    }
   [TestMethod]
   public void OrderRequestContructor_ReturnsInstanceOfOrderRequest_OrderRequest()
   {
@@ -26,11 +30,11 @@ public class CategoryTests
   {
 
     //Arrange
-    string name = "Test Order";
-    OrderRequest newTestOrder = new OrderRequest(name);
+    string testOrderItem = "Test01";
+    OrderRequest TestOrder = new OrderRequest(testOrderItem);
 
     //Act
-    int result = newTestOrder.Id;
+    int result = TestOrder.Id;
 
     //Assert
     Assert.AreEqual(1, result);
