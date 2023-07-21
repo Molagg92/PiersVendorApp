@@ -26,6 +26,11 @@ namespace PiersVendorApp.Models
     {
       return _instances;
     }
+    //     public static VendorAccount Find(int searchId)
+    // {
+    //   return _instances[searchId-1];
+    // }
+
 
   }
 }

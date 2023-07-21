@@ -56,4 +56,21 @@ public class CategoryTests : IDisposable
     //Assert
     CollectionAssert.AreEqual(newList, result);
   }
+  
+  [TestMethod]
+  public void Find_ReturnsCorrectCategory_Category()
+  {
+    //Arrange
+    string test03 = "Work";
+    string test04 = "School";
+    VendorAccount newVendor03 = new VendorAccount(test03);
+    VendorAccount newVendor04 = new VendorAccount(test04);
+
+    //Act
+    VendorAccount result = VendorAccount.Find(2);
+
+    //Assert
+    Assert.AreEqual(newVendor03, result);
+  }
+
 }
