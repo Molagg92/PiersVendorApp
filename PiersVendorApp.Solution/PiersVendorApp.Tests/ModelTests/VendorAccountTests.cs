@@ -40,19 +40,20 @@ public class CategoryTests : IDisposable
     Assert.AreEqual(1, result);
 
   }
-  // [TestMethod]
-  // public void GetAll_ReturnAllVendorAccountObjects_VendorAccountList()
-  // {
-  //   //Arrange
-  //   string testName01 = "Learn C#";
-  //   string testName02 = "Conquer The Earth";
-  //   VendorAccount newTestOrder01 = new VendorAccount(testName01);
-  //   VendorAccount newTestOrder02 = new VendorAccount(testName02);
-    
+  [TestMethod]
+  public void GetAll_ReturnAllVendorAccountObjects_VendorAccountList()
+  {
+    //Arrange
+    string test01 = "Darth Vader";
+    string test02 = "Scooby-Doo";
+    VendorAccount newTestVender01 = new VendorAccount(test01);
+    VendorAccount newTestVender02 = new VendorAccount(test02);
+    List<VendorAccount> newList = new List<VendorAccount> { newTestVender01, newTestVender02};
 
-  //   //Act
+    //Act
+    List<CategoryTests> result = VendorAccount.GetAll();
 
-  //   //Assert
-
-  //}
+    //Assert
+    CollectionAssert.AreEqual(newList, result);
+  }
 }
