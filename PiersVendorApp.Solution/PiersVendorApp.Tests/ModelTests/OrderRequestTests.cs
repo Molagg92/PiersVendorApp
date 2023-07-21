@@ -20,6 +20,20 @@ public class CategoryTests
 
       // Assert
       Assert.AreEqual(testOrderItem, result);
+  }
+  [TestMethod]
+  public void GetID_ReturnsOrderRequestId_Int()
+  {
+
+    //Arrange
+    string name = "Test Order";
+    OrderRequest newTestOrder = new OrderRequest(name);
+
+    //Act
+    int result = newTestOrder.Id;
+
+    //Assert
+    Assert.AreEqual(1, result);
 
   }
 }
