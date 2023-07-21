@@ -6,7 +6,7 @@ using System;
 namespace PiersVendorApp.Tests;
 
         [TestClass]
-public class CategoryTests : IDisposable
+public class VendorAccountTests : IDisposable
 {
    public void Dispose()
     {
@@ -58,7 +58,7 @@ public class CategoryTests : IDisposable
   }
   
   [TestMethod]
-  public void Find_ReturnsCorrectCategory_Category()
+  public void Find_ReturnsCorrectVendorAccount_VendorAccount()
   {
     //Arrange
     string test03 = "Work";
@@ -70,7 +70,7 @@ public class CategoryTests : IDisposable
     VendorAccount result = VendorAccount.Find(2);
 
     //Assert
-    Assert.AreEqual(newVendor03, result);
+    Assert.AreEqual(newVendor04, result);
   }
 
 }
