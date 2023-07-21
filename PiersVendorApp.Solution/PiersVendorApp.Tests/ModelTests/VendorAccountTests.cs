@@ -51,7 +51,7 @@ public class CategoryTests : IDisposable
     List<VendorAccount> newList = new List<VendorAccount> { newTestVender01, newTestVender02};
 
     //Act
-    List<CategoryTests> result = VendorAccount.GetAll();
+    List<VendorAccount> result = VendorAccount.GetAll();
 
     //Assert
     CollectionAssert.AreEqual(newList, result);

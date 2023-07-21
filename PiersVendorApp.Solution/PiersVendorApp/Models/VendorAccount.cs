@@ -21,5 +21,11 @@ namespace PiersVendorApp.Models
   {
     _instances.Clear();
   }
+
+ public static List<VendorAccount> GetAll()
+    {
+      return _instances;
+    }
+
   }
 }
