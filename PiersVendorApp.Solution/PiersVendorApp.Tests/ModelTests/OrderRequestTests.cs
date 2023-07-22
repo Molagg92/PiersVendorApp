@@ -10,7 +10,7 @@ public class OrderRequestTests : IDisposable
 {
   public void Dispose()
   {
-    VendorAccount.ClearAll();
+    OrderRequest.ClearAll();
   }
   [TestMethod]
   public void OrderRequestConstructor_ReturnsInstanceOfOrderRequest_OrderRest()
@@ -30,11 +30,11 @@ public class OrderRequestTests : IDisposable
   public void GetId_ReturnsIdOfOrderRequest_int()
   {
     // Arrange
-    string testOrderItem = "Test01";
-    OrderRequest TestOrder = new OrderRequest(testOrderItem);
-
+    string testOrder = "Test01";
+    OrderRequest Testr = new OrderRequest(testOrder);
+    Console.WriteLine(Testr);
     // Act
-    int result = TestOrder.Id;
+    int result = Testr.Id;
 
     // Assert
     Assert.AreEqual(1, result);

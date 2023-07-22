@@ -6,15 +6,30 @@ namespace PiersVendorApp.Models
   {
     public string Order { get; set; }
     public int Id { get; }
-    private static List<OrderRequest> _instances = new List<OrderRequest> { };
+    private static List<OrderRequest> _orderInstances = new List<OrderRequest> { };
 
     public OrderRequest(string order)
     {
       Order = order;
-      // _instances.Add(this);
-      // Id = _instances.Count;
+      _orderInstances.Add(this);
+      Id = _orderInstances.Count;
       
     }
+
+    
+    public static List<OrderRequest> GetAll()
+    {
+      return _orderInstances;
+    }
+
+    public static void ClearAll()
+    {
+      _orderInstances.Clear();
+    }
+    // public static OrderRequest Find(int searchId)
+    // {
+    //   return _orderInstances[searchId-1];
+    // }
 
   }
 }
