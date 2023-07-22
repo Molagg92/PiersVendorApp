@@ -73,18 +73,23 @@ public class VendorAccountTests : IDisposable
     Assert.AreEqual(newVendor04, result);
   }
 
-  // [TestMethod]
-  // public void AddOrder_AssociatesOrderWithVerndor_OrderList()
-  // {
-  //   //Arrange
-  //   string test05 = "30 Pastries";
-  //   OrderRequest testOrder = new OrderRequest(test05);
+  [TestMethod]
+  public void AddOrder_AssociatesOrderWithVerndor_OrderList()
+  {
+    //Arrange
+    string testOrder = "30 pastries";
+    OrderRequest newOrder = new OrderRequest(testOrder);
+    List<OrderRequest> newList = new List<OrderRequest> { newOrder };
+    string name = "Son Goku's Gut-Buster Buffet";
+    VendorAccount testVendor = new VendorAccount(name);
+    testVendor.AddOrder(newOrder);
 
+    //Act
+    List<OrderRequest> result = testVendor.Orders;
 
-  //   //Act
+    //Assert
+    CollectionAssert.AreEqual(newList, result);
 
-  //   //Assert
-
-  // }
+  }
 
 }

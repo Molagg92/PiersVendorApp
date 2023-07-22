@@ -6,7 +6,6 @@ using System;
 namespace PiersVendorApp.Tests;
 
 [TestClass]
-
 public class OrderRequestTests
 {
   [TestMethod]
