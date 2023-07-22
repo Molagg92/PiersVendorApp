@@ -31,10 +31,10 @@ namespace PiersVendorApp.Models
       return _instances[searchId-1];
     }
 
-  //    public void AddOrder(OrderRequest order)
-  // {
-  //   Orders.Add(order);
-  // }
+     public void AddOrder(OrderRequest order)
+  {
+    Orders.Add(order);
+  }
 
   
 
