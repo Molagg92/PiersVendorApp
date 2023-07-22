@@ -20,7 +20,7 @@ public class OrderRequestTests : IDisposable
     OrderRequest test = new OrderRequest(testOrderItem);
 
     // Act
-    string result = test.Order;
+    string result = test.OrderItem;
 
     // Assert
     Assert.AreEqual(testOrderItem, result);

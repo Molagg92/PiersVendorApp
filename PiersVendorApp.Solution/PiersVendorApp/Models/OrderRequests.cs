@@ -26,10 +26,10 @@ namespace PiersVendorApp.Models
     {
       _orderInstances.Clear();
     }
-    // public static OrderRequest Find(int searchId)
-    // {
-    //   return _orderInstances[searchId-1];
-    // }
+    public static OrderRequest Find(int searchId)
+    {
+      return _orderInstances[searchId-1];
+    }
 
   }
 }
