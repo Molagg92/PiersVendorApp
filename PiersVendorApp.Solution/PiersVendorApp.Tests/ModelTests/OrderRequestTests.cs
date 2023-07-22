@@ -40,5 +40,20 @@ public class OrderRequestTests : IDisposable
     Assert.AreEqual(1, result);
 
   }
+  [TestMethod]
+  public void Find_ReturnsCorrectOrderRequest_OrderRequest()
+  {
+      //Arrange
+    string orderTest = "30 loafs of Bread";
+    string orderTest2 = "20 Pastries";
+    OrderRequest breadOrder = new OrderRequest(orderTest);
+    OrderRequest pastryOrder = new OrderRequest(orderTest2);
+
+    //Act
+    OrderRequest result = OrderRequest.Find(2);
+
+    //Assert
+    Assert.AreEqual(pastryOrder, result);
+  }
 
 }

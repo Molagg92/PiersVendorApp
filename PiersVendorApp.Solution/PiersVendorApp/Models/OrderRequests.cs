@@ -4,13 +4,13 @@ namespace PiersVendorApp.Models
 {
   public class OrderRequest
   {
-    public string Order { get; set; }
+    public string OrderItem  { get; set; }
     public int Id { get; }
     private static List<OrderRequest> _orderInstances = new List<OrderRequest> { };
 
-    public OrderRequest(string order)
+    public OrderRequest(string orderItem)
     {
-      Order = order;
+      OrderItem = orderItem ;
       _orderInstances.Add(this);
       Id = _orderInstances.Count;
       
