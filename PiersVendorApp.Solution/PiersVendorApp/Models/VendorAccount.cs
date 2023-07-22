@@ -7,14 +7,14 @@ namespace PiersVendorApp.Models
     public string AccountName { get; set; }
     private static List<VendorAccount> _instances = new List<VendorAccount> {};
     public int Id { get; }
-    public List<OrderRequest> Order { get; set; }
+    public List<OrderRequest> Orders { get; set; }
     
     public VendorAccount(string accountName)
     {
       AccountName = accountName;
       _instances.Add(this);
       Id = _instances.Count;
-      Order = new List<OrderRequest>{};
+      Orders = new List<OrderRequest>{};
     }
 
      public static void ClearAll()
@@ -31,6 +31,12 @@ namespace PiersVendorApp.Models
       return _instances[searchId-1];
     }
 
+  //    public void AddOrder(OrderRequest order)
+  // {
+  //   Orders.Add(order);
+  // }
+
+  
 
   }
 }

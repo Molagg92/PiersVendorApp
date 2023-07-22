@@ -5,7 +5,7 @@ using System;
 
 namespace PiersVendorApp.Tests;
 
-        [TestClass]
+[TestClass]
 public class VendorAccountTests : IDisposable
 {
    public void Dispose()
@@ -61,8 +61,8 @@ public class VendorAccountTests : IDisposable
   public void Find_ReturnsCorrectVendorAccount_VendorAccount()
   {
     //Arrange
-    string test03 = "Work";
-    string test04 = "School";
+    string test03 = "Ms.Piggy";
+    string test04 = "Thor, Son of Odin.";
     VendorAccount newVendor03 = new VendorAccount(test03);
     VendorAccount newVendor04 = new VendorAccount(test04);
 
@@ -72,5 +72,19 @@ public class VendorAccountTests : IDisposable
     //Assert
     Assert.AreEqual(newVendor04, result);
   }
+
+  // [TestMethod]
+  // public void AddOrder_AssociatesOrderWithVerndor_OrderList()
+  // {
+  //   //Arrange
+  //   string test05 = "30 Pastries";
+  //   OrderRequest testOrder = new OrderRequest(test05);
+
+
+  //   //Act
+
+  //   //Assert
+
+  // }
 
 }
