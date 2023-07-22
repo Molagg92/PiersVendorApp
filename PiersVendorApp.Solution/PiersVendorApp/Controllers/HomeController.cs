@@ -8,25 +8,25 @@ namespace PiersVendorApp.Controllers
     public class VendorAccountController : Controller
     {
 
-    [HttpGet("/vendors")]
+    [HttpGet("/")]
     public ActionResult Index()
     {
-        List<VendorAccount> allVendors = VendorAccount.GetAll();
-        return View(allVendors);
+      List<VendorAccount> allVendors = VendorAccount.GetAll();
+      return View();
     }
-
     [HttpGet("/vendors/new")]
     public ActionResult New()
     {
-        return View();
+      return View();
     }
-
       [HttpPost("/vendors")]
     public ActionResult Create(string vendorName)
     {
-        VendorAccount newAccount = new VendorAccount(vendorName);
-        return RedirectToAction("Index");
+      VendorAccount newAccount = new VendorAccount(vendorName);
+      return RedirectToAction("Index");
     }
+
+    // --Code below need to be refactored to work with OrdersController--
     // [HttpGet("/categories/{id}")]
     // public ActionResult Show(int id)
     // {
