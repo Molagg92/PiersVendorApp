@@ -8,7 +8,7 @@ namespace PiersVendorApp.Models
 
     public OrderRequest(string order)
     {
-      // Order = order;
+       Order = order;
     }
 
   }
