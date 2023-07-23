@@ -11,22 +11,25 @@ namespace PiersVendorApp.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      List<VendorAccount> allVendors = VendorAccount.GetAll();
-      return View(allVendors);
+     
+      return View();
     }
+
+
 
     //---- Dont know what I did to the code below, but stopped working.
     //--- I need to Back up, and amake sure things work from Teh beginning.
-    [HttpGet("/vendors/new")]
-    public ActionResult New()
-    {
-      return View();
-    }
+   
+
+
+
+
     //   [HttpPost("/vendors")]
-    // public ActionResult Create(string vendorName)
+    // public ActionResult Create(string accountName)
     // {
-    //   VendorAccount newAccount = new VendorAccount(vendorName);
-    //   return RedirectToAction("Index");
+    //   VendorAccount newVendor = new VendorAccount("Vender number 1");
+    //   List<VendorAccount> allVendors = VendorAccount.GetAll();
+    //   return RedirectToAction("index", allVendors);
     // }
 
 
