@@ -5,26 +5,35 @@ using PiersVendorApp.Models;
 
 namespace PiersVendorApp.Controllers
 {
-    public class VendorAccountController : Controller
+    public class HomeController : Controller
     {
 
     [HttpGet("/")]
     public ActionResult Index()
     {
       List<VendorAccount> allVendors = VendorAccount.GetAll();
-      return View();
+      return View(allVendors);
     }
-    [HttpGet("/vendors/new")]
-    public ActionResult New()
-    {
-      return View();
-    }
-      [HttpPost("/vendors")]
-    public ActionResult Create(string vendorName)
-    {
-      VendorAccount newAccount = new VendorAccount(vendorName);
-      return RedirectToAction("Index");
-    }
+
+    //---- Dont know what I did to the code below, but stopped working.
+    //--- I need to Back up, and amake sure things work from Teh beginning.
+    // [HttpGet("/vendors/new")]
+    // public ActionResult New()
+    // {
+    //   return View();
+    // }
+    //   [HttpPost("/vendors")]
+    // public ActionResult Create(string vendorName)
+    // {
+    //   VendorAccount newAccount = new VendorAccount(vendorName);
+    //   return RedirectToAction("Index");
+    // }
+
+
+
+
+
+
 
     // --Code below need to be refactored to work with OrdersController--
     // [HttpGet("/categories/{id}")]
