@@ -37,8 +37,21 @@ namespace PiersVendorApp.Controllers
     VendorAccount selectedVendor = VendorAccount.Find(id);
     List<OrderRequest> vendorOrders = selectedVendor.Orders;
     model.Add("vendor", selectedVendor);
-    model.Add("order", vendorOrders);
+    model.Add("orders", vendorOrders);
     return View(model);
+  }
+
+  [HttpPost("/vendors/{vendorId}/orders")]
+  public ActionResult Create(int vendorId, string orderDescription)
+  {
+    Dictionary<string, object> model = new Dictionary<string, object>();
+    VendorAccount foundVendorAccount = VendorAccount.Find(vendorId);
+    OrderRequest newOrder = new OrderRequest(orderDescription);
+    foundVendorAccount.AddOrder(newOrder);
+    List<OrderRequest> vendorOrders = foundVendorAccount.Orders;
+    model.Add("orders", vendorOrders);
+    model.Add("vendor", foundVendorAccount);
+    return View("Show", model);
   }
 
   }
