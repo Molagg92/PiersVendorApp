@@ -30,5 +30,16 @@ namespace PiersVendorApp.Controllers
       return RedirectToAction("Index");
     }
 
+  [HttpGet("/vendors/{id}")]
+  public ActionResult Show(int id)
+  {
+    Dictionary<string, object> model = new Dictionary<string, object>();
+    VendorAccount selectedVendor = VendorAccount.Find(id);
+    List<OrderRequest> vendorOrders = selectedVendor.Orders;
+    model.Add("vendor", selectedVendor);
+    model.Add("order", vendorOrders);
+    return View(model);
+  }
+
   }
 }
