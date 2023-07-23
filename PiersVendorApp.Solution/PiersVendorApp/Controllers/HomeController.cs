@@ -17,11 +17,11 @@ namespace PiersVendorApp.Controllers
 
     //---- Dont know what I did to the code below, but stopped working.
     //--- I need to Back up, and amake sure things work from Teh beginning.
-    // [HttpGet("/vendors/new")]
-    // public ActionResult New()
-    // {
-    //   return View();
-    // }
+    [HttpGet("/vendors/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
     //   [HttpPost("/vendors")]
     // public ActionResult Create(string vendorName)
     // {
