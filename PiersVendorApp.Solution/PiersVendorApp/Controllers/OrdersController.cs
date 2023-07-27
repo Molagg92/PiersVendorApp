@@ -17,12 +17,12 @@ namespace PiersVendorApp.Controllers
       return View(model);
     }
 
-  [HttpGet("/vendors/{vendorId}/orders/new")]
-  public ActionResult New(int vendorId)
-  {
-     VendorAccount vendor = VendorAccount.Find(vendorId);
-     return View(vendor);
-  }
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult New(int vendorId)
+    {
+      VendorAccount vendor = VendorAccount.Find(vendorId);
+      return View(vendor);
+    }
 
   }
 }
