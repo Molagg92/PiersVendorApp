@@ -1,6 +1,6 @@
 # _PiersVendorApp.Solution_
 
-#### _An app for Pier the Baker, taht titular we all know and love, this app helps organise his incoming orders and venro accounts. Piere's methods are constatnly evolving._
+#### _An app for Pier the Baker,  this app helps organize his incoming orders and vendor accounts._
 
 #### By Erik Z. / Molagg92
 
@@ -31,7 +31,7 @@ _This application uses C# to track order details for Pier's Bakery buisness. A u
 
 ## Known Bugs
 
-* _No known bugs as of 07/21/23_
+* _ Currently the app is having issues adding orders, after an order has been added to list, for some reason the text is not showing on list. As of  07/30/23_
 
 ## License
 

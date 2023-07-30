@@ -12,7 +12,7 @@
   <body>
     @using PiersVendorApp.Models;
 
-    <h3>Here are all the orders in @Model["vendor"].AccountName 's history:</h3>
+    <h3>Here are account details for @Model["vendor"].AccountName 's history:</h3>
 
     <ol>
     @foreach (OrderRequest order in @Model["orders"])

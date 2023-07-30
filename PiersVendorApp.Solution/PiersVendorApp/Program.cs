@@ -14,6 +14,7 @@ namespace PiersVendorApp
       WebApplication app = builder.Build();
 
       app.UseHttpsRedirection();
+      app.UseStaticFiles();
 
       app.UseRouting();
 
